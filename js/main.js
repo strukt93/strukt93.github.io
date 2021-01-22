@@ -19,19 +19,16 @@ var configs = (function () {
         date_help: "Print the system date and time.",
         help_help: "Print this menu.",
         clear_help: "Clear the terminal screen.",
-        reboot_help: "Reboot the system.",
         cd_help: "Change the current working directory.",
         mv_help: "Move (rename) files.",
         rm_help: "Remove files or directories.",
         rmdir_help: "Remove directory, this command will only work if the folders are empty.",
         touch_help: "Change file timestamps. If the file doesn't exist, it's created an empty one.",
         sudo_help: "Execute a command as the superuser.",
-        //welcome: "Welcome! :)\nIn order for you to start customizing the texts, go to js/main.js and replace the texts located at the configs var.\nIn that same file, you can define all the fake files you want as well as their content. This files will appear on the sidenav.\nAlso, don't forget to change the colors on the css/main.css file as well as the website title on the index.html file.\nNow in order to get started, feel free to either execute the 'help' command or use the more user-friendly colored sidenav at your left.\nIn order to skip text rolling, double click/touch anywhere.",
-        welcome: "Welcome! This website is still under construction, stay tuned!",
+        welcome: "Welcome to my website!\nMy name is Mustafa Hasan and I am a Security Engineer at DeliverHero and a Security Analyst at HackerOne!\nIn order to get started, feel free to either execute the 'help' command or use the more user-friendly colored sidenav at your left.\nIn order to skip text rolling, double click/touch anywhere.",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this website won't work properly.",
         welcome_file_name: "welcome_message.txt",
         invalid_command_message: "<value>: command not found.",
-        reboot_message: "Preparing to reboot...\n\n3...\n\n2...\n\n1...\n\nRebooting...\n\n",
         permission_denied_message: "Unable to '<value>', permission denied.",
         sudo_message: "Unable to sudo using a web client.",
         usage: "Usage",
@@ -46,7 +43,7 @@ var configs = (function () {
         host: "strukt.rocks",
         user: "guest",
         is_root: false,
-        type_delay: 20
+        type_delay: 10
     };
     return {
         getInstance: function (options) {
@@ -71,7 +68,11 @@ var files = (function () {
         "about.txt": "This website was made using only pure JavaScript with no extra libraries.\nI made it dynamic so anyone can use it, just download it from GitHub and change the config text according to your needs.\nIf you manage to find any bugs or security issues feel free to email me: luisbraganca@protonmail.com",
         "contact.txt": "strukt93@gmail.com",
         "twitter.txt": "https://twitter.com/strukt93/",
-        "linkedin.txt": "https://www.linkedin.com/in/strukt93/"
+        "linkedin.txt": "https://www.linkedin.com/in/strukt93/",
+        "education.txt": "I have a BSc of Information Technology with specialization in Information System Security. \nI studied 3.5 years of Computer Science in the German University in Cairo in Egypt before transferring to Asia Pacific University in Kuala Lumpur, Malaysia, where I graduated.",
+        "experience_1.txt": "I started my career journey as an Android application and PHP developer. I quickly switched to the field of Information Security as I found myself more interested there, where I mostly worked on bug bounty programs as a full time job for almost two years. Companies such as Google, AT&T, Yahoo!, Microsoft, and Sony are among the numerous organizations that I helped secure their systems and applications via their responsible disclosure and bug bounty programs.",
+        "experience_2.txt": "While studying in Malaysia, I worked for Netsparker, performing Q&A on the Netsparker web application vulnerability scanner. I then worked as a research and development assistant at APIIT, the parent organization of the APU, where I developed applications and systems for the university. Projects included the QMS, the queuing system used across the university bureaus and service desks, and TransiX, the bus tracking system used by the university to track their busses in real-time as well as to charge students on a per-trip basis.",
+        "experience_3.txt": "After finishing my studies and returning to Egypt, I worked for SecureMisr (now Cysiv) as a penetration tester, where I worked on projects for big names such as the Central Bank of Egypt (CBE), the National Bank of Egypt (NBE), Vodafone, and many others. I then moved to HackerOne, where I am currently working as a contractor security analyst, handling bug bounty submissions for companies as large as Paypal, Alibaba, Adobe, and hunderds of others. I have lately joined DeliverHero as a full-time security engineer." 
     };
     return {
         getInstance: function (options) {
@@ -125,7 +126,6 @@ var main = (function () {
         DATE: { value: "date", help: configs.getInstance().date_help },
         HELP: { value: "help", help: configs.getInstance().help_help },
         CLEAR: { value: "clear", help: configs.getInstance().clear_help },
-        REBOOT: { value: "reboot", help: configs.getInstance().reboot_help },
         CD: { value: "cd", help: configs.getInstance().cd_help },
         MV: { value: "mv", help: configs.getInstance().mv_help },
         RM: { value: "rm", help: configs.getInstance().rm_help },
@@ -328,9 +328,6 @@ var main = (function () {
             case cmds.CLEAR.value:
                 this.clear();
                 break;
-            case cmds.REBOOT.value:
-                this.reboot();
-                break;
             case cmds.CD.value:
             case cmds.MV.value:
             case cmds.RMDIR.value:
@@ -393,10 +390,6 @@ var main = (function () {
         this.prompt.textContent = "";
         this.prompt.textContent = this.completePrompt;
         this.unlock();
-    };
-
-    Terminal.prototype.reboot = function () {
-        this.type(configs.getInstance().reboot_message, this.reset.bind(this));
     };
 
     Terminal.prototype.reset = function () {
