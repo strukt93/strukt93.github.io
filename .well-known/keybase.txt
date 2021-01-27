@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/mhasandh
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://strukt.rocks
+  * I am mhasandh (https://keybase.io/mhasandh) on keybase.
+  * I have a public key ASBv3BXBlX_0Mcu4nXOo1a_jJphfXlTrLiSwAF7XOVjIDAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01206fdc15c1957ff431cbb89d73a8d5afe326985f5e54eb2e24b0005ed73958c80c0a",
+      "host": "keybase.io",
+      "kid": "01206fdc15c1957ff431cbb89d73a8d5afe326985f5e54eb2e24b0005ed73958c80c0a",
+      "uid": "c2dcba168a073ea2170b954fbe8c0019",
+      "username": "mhasandh"
+    },
+    "merkle_root": {
+      "ctime": 1611759013,
+      "hash": "ac825e1eb34a54f94d64544539aa9a106c2f64320cceec8721628183b0df672fdafe8d8d19fe90c83b111a8eae10dd7b4931534fecb450a846cdef78ecd3af78",
+      "hash_meta": "44eea3f81a04e024835930bb58b4e2861dade07a993ba3fb69e0848606dda0c0",
+      "seqno": 18923413
+    },
+    "service": {
+      "entropy": "nVqH1xzEKXkiDQ+eKYhvOWuX",
+      "hostname": "strukt.rocks",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.0"
+  },
+  "ctime": 1611759058,
+  "expire_in": 504576000,
+  "prev": "e5abf8cdf4eefacd12b62562595ede35eca0625c71ce7ec9e23997cc902e6d6b",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgb9wVwZV/9DHLuJ1zqNWv4yaYX15U6y4ksABe1zlYyAwKp3BheWxvYWTESpcCBsQg5av4zfTu+s0StiViWV7eNeygYlxxzn7J4jmXzJAubWvEILO4lrw+YgmLJMe/K5dLdlBir+gvbKtWjaHd8R4WnE+YAgHCo3NpZ8RAgiJp3c7Rt42urZUh3IgzR0lGmu7AEuRX+PhrNQzmovM+hBnsZY3rwLxrFTGA3+DlphrAF6Q/3N64GEjq2dfKCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOfNE33cdfWRg9s2+dReI+mZEQTLh1QeY53Z2oCxtcUyo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mhasandh
+
+==================================================================
