@@ -25,7 +25,7 @@ var configs = (function () {
         rmdir_help: "Remove directory, this command will only work if the folders are empty.",
         touch_help: "Change file timestamps. If the file doesn't exist, it's created an empty one.",
         sudo_help: "Execute a command as the superuser.",
-        welcome: "Welcome to my website!\nMy name is Mustafa Hasan and I am a Security Engineer at DeliverHero and a Security Analyst at HackerOne!\nIn order to get started, feel free to either execute the 'help' command or use the more user-friendly colored sidenav at your left.\nIn order to skip text rolling, double click/touch anywhere.",
+        welcome: "Welcome to my website!\nMy name is Mustafa Hasan and I am a Smart Contract Auditor III at Quantstamp, a Security Analyst at HackerOne, and an individual security services provider!\nIn order to get started, feel free to either execute the 'help' command or use the more user-friendly colored sidenav at your left.\nIn order to skip text rolling, double click/touch anywhere.",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this website won't work properly.",
         welcome_file_name: "welcome_message.txt",
         invalid_command_message: "<value>: command not found.",
@@ -43,7 +43,7 @@ var configs = (function () {
         host: "strukt.rocks",
         user: "guest",
         is_root: false,
-        type_delay: 10
+        type_delay: 5
     };
     return {
         getInstance: function (options) {
@@ -64,10 +64,47 @@ var files = (function () {
             this[key] = options[key] || Singleton.defaultOptions[key];
         }
     };
+    var education = `I have a BSc of Information Technology with specialization in Information System Security.\n\
+    I studied 3.5 years of Computer Science in the German University in Cairo in Egypt before transferring to Asia Pacific \
+    University in Kuala Lumpur, Malaysia, where I graduated.\n\
+    I hold a number of information security certifications, check them out!`;
+    var experience = `I started my career journey as an Android application and PHP developer.\
+    I quickly switched to the field of Information Security as I found myself more interested there, \
+    where I mostly worked on bug bounty programs as a full time job for almost two years. \
+    Companies such as Google, AT&T, Yahoo!, Microsoft, and Sony are among the numerous organizations that I helped \
+    secure their systems and applications via their responsible disclosure and bug bounty programs.\n\nWhile studying in Malaysia, \
+    I worked for Netsparker, performing Q&A on the Netsparker web application vulnerability scanner. I then worked as a research \
+    and development assistant at APIIT, the parent organization of the APU, where I developed applications and systems for the university. \
+    Projects included the QMS, the queuing system used across the university bureaus and service desks, and TransiX, the bus tracking system used \
+    by the university to track their busses in real-time as well as to charge students on a per-trip basis.\n\n\
+    After finishing my studies and returning to Egypt, I worked for SecureMisr (now Cysiv) as a penetration tester, \
+    where I worked on projects for big names such as the Central Bank of Egypt (CBE), the National Bank of Egypt (NBE), \
+    Vodafone, and many others. I then moved to HackerOne, where I am currently working as a contractor security analyst, \
+    handling bug bounty submissions for companies as large as Paypal, Alibaba, Adobe, and hunderds of others. I then \
+    joined DeliverHero as a full-time security engineer and worked there for a year. \n\nMy next stop was at Halborn Security, \
+    where I started a new role as a smart contract auditor performing source code reviews and auditing services for \
+    EVM and Rust based blockchain apps, such as Ethereum, Arbitrum, NEAR and Substrate, I also provided pentesting services \
+    to our customers when they needed them. Finally, I joined Quantstamp as a senior smart contract auditor, extending my experience by \
+    performing smart contract auditing services for additional ecosystems such as Solana, Aptos, and Cardano, while still being the go-to \
+    personnel for anything web application security.`;
+    var certifications = `The following list contains all of the certificates I obtained:\n\t\
+    - eLearnSecurity Web Application Penetration Tester eXtreme (eWPTX)\n\t\
+    - eLearnSecurity Certified Professional Penetration Tester (eCPPT)\n\t\
+    - eLearnSecurity Mobile Application Penetration Tester (eMAPT)\n\t\
+    - Attacking Active Directory with Linux`;
+    var services = `I provide a wide range of security services as an individual. Following is a list of the type of services I provide:\n\
+    - Web application penetrations testing\n\
+    - Mobile application penetration testing\n\
+    - Desktop application penetration testing\n\
+    - Source code security reviews\n\
+    - Cloud red teaming activities and configuration security reviews\n\
+    - Blockchain smart contract auditing for EVM-based and Rust-based ecosystems\n\
+    Reach out to me at strukt93@gmail.com to request for a quote.`;
     Singleton.defaultOptions = {
-        "education.txt": "I have a BSc of Information Technology with specialization in Information System Security. \nI studied 3.5 years of Computer Science in the German University in Cairo in Egypt before transferring to Asia Pacific University in Kuala Lumpur, Malaysia, where I graduated.",
-        "experience.txt": "I started my career journey as an Android application and PHP developer. I quickly switched to the field of Information Security as I found myself more interested there, where I mostly worked on bug bounty programs as a full time job for almost two years. Companies such as Google, AT&T, Yahoo!, Microsoft, and Sony are among the numerous organizations that I helped secure their systems and applications via their responsible disclosure and bug bounty programs.\n\nWhile studying in Malaysia, I worked for Netsparker, performing Q&A on the Netsparker web application vulnerability scanner. I then worked as a research and development assistant at APIIT, the parent organization of the APU, where I developed applications and systems for the university. Projects included the QMS, the queuing system used across the university bureaus and service desks, and TransiX, the bus tracking system used by the university to track their busses in real-time as well as to charge students on a per-trip basis.\n\nAfter finishing my studies and returning to Egypt, I worked for SecureMisr (now Cysiv) as a penetration tester, where I worked on projects for big names such as the Central Bank of Egypt (CBE), the National Bank of Egypt (NBE), Vodafone, and many others. I then moved to HackerOne, where I am currently working as a contractor security analyst, handling bug bounty submissions for companies as large as Paypal, Alibaba, Adobe, and hunderds of others. I have lately joined DeliverHero as a full-time security engineer.",
-        "certs.txt": "The following list contains all of the certificates I obtained:\n\t- eLearnSecurity Web Application Penetration Tester eXtreme (eWPTX)\n\t- eLearnSecurity Certified Professional Penetration Tester (eCPPT)\n\t- eLearnSecurity Mobile Application Penetration Tester (eMAPT)",
+        "education.txt": education,
+        "experience.txt": experience,
+        "certifications.txt": certifications,
+        "services.txt": services,
         "contact.txt": "strukt93@gmail.com",
         "twitter.txt": "https://twitter.com/strukt93/",
         "linkedin.txt": "https://www.linkedin.com/in/strukt93/",
